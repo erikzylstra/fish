@@ -1,4 +1,11 @@
 if status is-interactive
+
+    if status is-login
+        if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+            exec Hyprland
+        end
+    end
+
     # Starship custom prompt
     starship init fish | source
 
@@ -12,7 +19,8 @@ if status is-interactive
     # Abbrs
     abbr gd 'git diff'
     abbr ga 'git add .'
-    abbr gc 'git commit -am'
+	abbr gca 'git commit -am "'
+    abbr gc 'git commit -m "'
     abbr gl 'git log'
     abbr gs 'git status'
     abbr gst 'git stash'
@@ -25,6 +33,7 @@ if status is-interactive
     abbr gbd 'git branch -d'
     abbr gco 'git checkout'
     abbr gsh 'git show'
+	abbr gpd 'git pushdev'
 
     abbr l 'ls'
     abbr ll 'ls -l'
@@ -39,3 +48,7 @@ if status is-interactive
         echo -en "\e]133;A\e\\"
     end
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
