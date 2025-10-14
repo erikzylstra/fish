@@ -35,11 +35,6 @@ if status is-interactive
     abbr gsh 'git show'
 	abbr gpd 'git pushdev'
 
-    abbr l 'ls'
-    abbr ll 'ls -l'
-    abbr la 'ls -a'
-    abbr lla 'ls -la'
-
     # Custom colours
     cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
 
