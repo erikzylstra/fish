@@ -18,30 +18,34 @@ if status is-interactive
 
     # Abbrs
     abbr gd 'git diff'
-    abbr ga 'git add .'
-	abbr gca 'git commit -am "'
-    abbr gc 'git commit -m "'
+    abbr gaa 'git add .'
+    abbr ga 'git add'
+	abbr gca 'git commit -am'
+    abbr gc 'git commit -m'
     abbr gl 'git log'
+	abbr glg 'git log --oneline --graph --decorate --all'
+	abbr glp 'git log -p'
+	abbr gln 'git log --name-only'
     abbr gs 'git status'
     abbr gst 'git stash'
     abbr gsp 'git stash pop'
     abbr gp 'git push'
     abbr gpl 'git pull'
-    abbr gsw 'git switch'
+    abbr gsb 'git switch'
     abbr gsm 'git switch main'
     abbr gb 'git branch'
     abbr gbd 'git branch -d'
     abbr gco 'git checkout'
     abbr gsh 'git show'
 	abbr gpd 'git pushdev'
+	abbr gr 'git restore'
+	abbr grs 'git restore --staged'
+	abbr v 'nvim'
+	abbr spotify 'nohup spotify >/dev/null 2>&1 & disown'
 
     # Custom colours
     cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
 
-    # For jumping between prompts in foot terminal
-    function mark_prompt_start --on-event fish_prompt
-        echo -en "\e]133;A\e\\"
-    end
 end
 
 # bun
