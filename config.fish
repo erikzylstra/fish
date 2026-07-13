@@ -26,6 +26,7 @@ if status is-interactive
     abbr glg 'git log --oneline --graph --decorate --all'
     abbr glp 'git log -p --color --decorate --all'
     abbr gln 'git log --name-only --decorate --all --color'
+    abbr gls 'git log --oneline --decorate=short --all --simplify-by-decoration'
     abbr gs 'git status'
     abbr gsv 'git status -v'
     abbr gst 'git stash'
@@ -41,6 +42,8 @@ if status is-interactive
     abbr gpd 'git pushdev'
     abbr gr 'git restore'
     abbr grs 'git restore --staged'
+    abbr gcp 'git cherry-pick'
+    abbr gcpn 'git cherry-pick --no-commit'
     abbr v nvim
 
     # Custom colours
